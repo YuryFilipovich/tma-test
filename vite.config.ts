@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     outDir: './docs'
   },
-  base: '/tma-js-test/'
+  base: 'https://yuryfilipovich.github.io/tma-test/'
 });
