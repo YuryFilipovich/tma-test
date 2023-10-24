@@ -36,9 +36,9 @@ function MainButtonTest() {
 
     if (count === 10) {
       popup.open({
-        title: 'Hello!',
-        message: 'Here is a test message.',
-        buttons: [{ id: 'my-id', type: 'default', text: 'Default text' }]
+        title: 'Counter!',
+        message: `You reached count ${count}`,
+        buttons: [{ id: 'close-btn', type: 'close' }]
       });
     }
 
