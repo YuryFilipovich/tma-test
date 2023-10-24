@@ -78,9 +78,7 @@ function InitData() {
       <code>
         {initDataJson}
       </code>
-      <code>
-        {JSON.stringify(initData)}
-      </code>
+      <p>test</p>
     </pre>
   );
 }
