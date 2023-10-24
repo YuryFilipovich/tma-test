@@ -35,7 +35,11 @@ function MainButtonTest() {
     }
 
     if (count === 10) {
-      popup.open
+      popup.open({
+        title: 'Hello!',
+        message: 'Here is a test message.',
+        buttons: [{ id: 'my-id', type: 'default', text: 'Default text' }]
+      });
     }
 
     backButton.show();
@@ -55,6 +59,7 @@ function InitData() {
       return 'Init data is empty.';
     }
     const { authDate, chat, hash, canSendAfter, queryId, receiver, user, startParam } = initData;
+    console.log(initData)
 
     return JSON.stringify({
       authDate,
