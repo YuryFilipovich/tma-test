@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState, type PropsWithChildren } from 'react';
-import { SDKProvider, useSDK, useMainButton, useBackButton, useInitData } from '@tma.js/sdk-react';
+import { SDKProvider, useSDK, useMainButton, useBackButton, useInitData, usePopup } from '@tma.js/sdk-react';
 
 function MainButtonTest() {
   const mainButton = useMainButton();
   const backButton = useBackButton();
+  const popup = usePopup()
 
   const [count, setCount] = useState(0);
 
@@ -32,6 +33,11 @@ function MainButtonTest() {
       backButton.hide();
       return;
     }
+
+    if (count === 10) {
+      popup.open
+    }
+
     backButton.show();
   }, [backButton, count]);
 
