@@ -55,6 +55,7 @@ function MainButtonTest() {
  */
 function InitData() {
   const initData = useInitData();
+  console.log(initData)
 
   const initDataJson = useMemo(() => {
     if (!initData) {
