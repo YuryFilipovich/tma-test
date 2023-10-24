@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState, type PropsWithChildren } from 'react';
 import { SDKProvider, useSDK, useMainButton, useBackButton, useInitData, usePopup } from '@tma.js/sdk-react';
+import eruda from 'eruda'
+
 
 function MainButtonTest() {
   const mainButton = useMainButton();
@@ -78,7 +80,6 @@ function InitData() {
       <code>
         {initDataJson}
       </code>
-      <p>test</p>
     </pre>
   );
 }
@@ -89,6 +90,7 @@ function InitData() {
  * went wrong, and a loader if the SDK is warming up.
  */
 function DisplayGate({ children }: PropsWithChildren) {
+  eruda.init()
   const { didInit, components, error } = useSDK();
   const errorMessage = useMemo<null | string>(() => {
     if (!error) {
