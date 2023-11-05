@@ -152,6 +152,7 @@ function DisplayGate({children}: PropsWithChildren) {
     return children;
 }
 
+
 /**
  * Root component of the whole project.
  */
